@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Бонус до 200% без паспорта и ожидания</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 0;
+    }
+    header {
+      background: #1e293b;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 24px;
+      margin: 0;
+      color: #38bdf8;
+    }
+    .lang-switcher {
+      margin-top: 10px;
+    }
+    .lang-switcher button {
+      background: none;
+      border: none;
+      color: #38bdf8;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+    .container {
+      padding: 20px;
+      text-align: center;
+    }
+    .hero-image {
+      width: 100%;
+      max-width: 700px;
+      margin: 20px auto;
+      border-radius: 8px;
+    }
+    .steps, .benefits {
+      margin-top: 30px;
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .steps h2, .benefits h2 {
+      color: #38bdf8;
+      font-size: 20px;
+    }
+    .steps ol, .benefits ul {
+      padding-left: 20px;
+    }
+    .cta-button {
+      background: #38bdf8;
+      color: #000;
+      padding: 14px 24px;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 6px;
+      display: inline-block;
+      margin: 30px 0;
+    }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #94a3b8;
+      margin-top: 40px;
+      padding-bottom: 20px;
+    }
+    .lang-section {
+      display: none;
+    }
+    .lang-section.active {
+      display: block;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 20px;
+      }
+      .steps h2, .benefits h2 {
+        font-size: 18px;
+      }
+      .cta-button {
+        font-size: 16px;
+        padding: 12px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Бонус до 200% без паспорта и ожидания</h1>
+    <div class="lang-switcher">
+      <button onclick="switchLang('ru')">RU</button> | <button onclick="switchLang('uz')">UZ</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div id="lang-ru" class="lang-section active">
+      <img src="https://via.placeholder.com/700x300?text=Ваш+бонус+ждёт" alt="Бонус" class="hero-image" />
+      <a href="#" class="cta-button">Получить бонус</a>
+      <div class="steps">
+        <h2>Как получить бонус:</h2>
+        <ol>
+          <li>Зарегистрируйтесь за 30 секунд</li>
+          <li>Пополните счёт от 50 000 сум</li>
+          <li>Получите до 200% бонуса и начните зарабатывать</li>
+        </ol>
+      </div>
+      <div class="benefits">
+        <h2>Почему это выгодно:</h2>
+        <ul>
+          <li>✅ Без верификации</li>
+          <li>✅ Быстрый вывод на карту Uzcard / Humo</li>
+          <li>✅ Простой старт — минимум шагов</li>
+          <li>✅ Удобно с телефона</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="lang-uz" class="lang-section">
+      <img src="https://via.placeholder.com/700x300?text=Bonus+sizni+kutmoqda" alt="Bonus" class="hero-image" />
+      <a href="#" class="cta-button">Bonusni olish</a>
+      <div class="steps">
+        <h2>Bonusni qanday olish mumkin:</h2>
+        <ol>
+          <li>Ro‘yxatdan o‘ting — 30 soniya</li>
+          <li>Hisobingizni 50 000 so‘mdan boshlab to‘ldiring</li>
+          <li>200% gacha bonusni oling va boshlang</li>
+        </ol>
+      </div>
+      <div class="benefits">
+        <h2>Nima uchun bu foydali:</h2>
+        <ul>
+          <li>✅ Verifikatsiyasiz</li>
+          <li>✅ Uzcard / Humo kartasiga tez to‘lov</li>
+          <li>✅ Minimal qadamlar bilan oson boshlash</li>
+          <li>✅ Telefon orqali qulay foydalanish</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Faqat 18+ foydalanuvchilar uchun<br />
+    Партнёрская платформа. Бонус временно доступен.
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById('lang-' + lang).classList.add('active');
+    }
+  </script>
+</body>
+</html>
