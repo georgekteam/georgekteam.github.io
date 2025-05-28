@@ -97,7 +97,7 @@
 </head>
 <body>
   <header>
-    <h1>Бонус до 200% без паспорта и ожидания</h1>
+    <h1 id="main-title">200% gacha bonus — pasportsiz va kutmasdan!</h1>
     <div class="lang-switcher">
       <button onclick="switchLang('ru')">RU</button> | <button onclick="switchLang('uz')">UZ</button>
     </div>
@@ -105,7 +105,7 @@
 
   <div class="container">
     <div id="lang-ru" class="lang-section active">
-      <img src="https://via.placeholder.com/700x300?text=Ваш+бонус+ждёт" alt="Бонус" class="hero-image" />
+      
       <a href="#" class="cta-button">Получить бонус</a>
       <div class="steps">
         <h2>Как получить бонус:</h2>
@@ -127,7 +127,7 @@
     </div>
 
     <div id="lang-uz" class="lang-section">
-      <img src="https://via.placeholder.com/700x300?text=Bonus+sizni+kutmoqda" alt="Bonus" class="hero-image" />
+      
       <a href="#" class="cta-button">Bonusni olish</a>
       <div class="steps">
         <h2>Bonusni qanday olish mumkin:</h2>
@@ -149,18 +149,36 @@
     </div>
   </div>
 
+  
   <footer>
-    Faqat 18+ foydalanuvchilar uchun<br />
-    Партнёрская платформа. Бонус временно доступен.
+    <div class="lang-section active" id="footer-ru">
+      Только для пользователей 18+<br />
+      Партнёрская платформа. Предложение ограничено.
+    </div>
+    <div class="lang-section" id="footer-uz">
+      Faqat 18+ foydalanuvchilar uchun<br />
+      Hamkorlik platformasi. Taklif vaqtincha amal qiladi.
+    </div>
   </footer>
+
 
   <script>
     function switchLang(lang) {
+      const titles = {
+        ru: "Бонус до 200% без паспорта и ожидания",
+        uz: "200% gacha bonus — pasportsiz va kutmasdan!"
+      };
+      document.getElementById('main-title').innerText = titles[lang];
       document.querySelectorAll('.lang-section').forEach(section => {
         section.classList.remove('active');
       });
       document.getElementById('lang-' + lang).classList.add('active');
+      document.getElementById('footer-ru').classList.toggle('active', lang === 'ru');
+      document.getElementById('footer-uz').classList.toggle('active', lang === 'uz');
     }
-  </script>
+    window.onload = function() {
+      switchLang('uz');
+    }
+</script>
 </body>
 </html>
